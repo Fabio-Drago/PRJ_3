@@ -1,4 +1,4 @@
-// CÃ³digo principal (MAIN)
+// Código principal (MAIN)
 
 #include "tarefas.h"
 #include "lop.h"
@@ -26,17 +26,43 @@ int main() {
         switch (opcao) {
             case 1:
                 {
-                    int id, prioridade;
-                    char descricao[50], data[15];
-                    printf("Digite o ID da tarefa: ");
-                    scanf("%d", &id);
-                    printf("Digite a descriÃ§Ã£o da tarefa: ");
+                	//Variáveis
+                    int id, prioridade, dia, mes, ano;
+                    char descricao[50];
+                    
+                    // Verificação da entrada para o ID
+                    printf("Digite o ID da tarefa (apenas números inteiros): ");
+                    int inputResult = scanf("%d", &id);
+
+                    // Verificando se a entrada é um número inteiro
+                    if (inputResult != 1) {
+                        printf("Entrada inválida para o ID. Use apenas números inteiros.\n");
+                        continue;  // Retorna ao início do loop
+                    }
+                    
+                    // Verificação da entrada para a descrição
+                    printf("Digite a descrição da tarefa: ");
                     scanf("%s", descricao);
-                    printf("Digite a data da tarefa (xx/xx/xxxx): ");
-                    scanf("%s", data);
+
+                    // Verificação da entrada para o dia, mês e ano
+                    printf("Digite a data da tarefa (dd mm aaaa): ");
+                    scanf("%d %d %d", &dia, &mes, &ano);
+                    if (dia < 1 || dia > 31 || 
+                        mes < 1 || mes > 12 || 
+                        ano < 2000 || ano > 2100) {
+                        printf("Formato ou valor de data inválido. Tarefa não adicionada.\n");
+                        continue;  // Retorna ao início do loop
+                    }
+
+                    // Verificação da entrada para a prioridade
                     printf("Digite a prioridade da tarefa (1-5): ");
                     scanf("%d", &prioridade);
-                    adicionarTarefa(&pilha, id, descricao, data, prioridade);
+                    if (prioridade < 1 || prioridade > 5) {
+                        printf("Prioridade inválida. Tarefa não adicionada.\n");
+                        continue;  // Retorna ao início do loop
+                    }
+
+                    adicionarTarefa(&pilha, id, descricao, dia, mes, ano, prioridade);
                     break;
                 }
             case 2:
@@ -55,7 +81,7 @@ int main() {
                 printf("Fechando o programa...\n");
                 break;
             default:
-                printf("OpÃ§Ã£o invÃ¡lida. Tente novamente.\n");
+                printf("Opção inválida. Tente novamente.\n");
         }
 
     } while (opcao != 6);

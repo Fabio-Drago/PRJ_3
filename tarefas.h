@@ -1,13 +1,16 @@
-// CÃ³digo de tarefas.h
+// Cabeçalho das tarefas
 
 #ifndef TAREFAS_H
 #define TAREFAS_H
 
+//Declarando as variáveis
 typedef struct Tarefa {
     int id;
     char descricao[50];
-    char data[15]; // Adicionando a data da tarefa
-    int prioridade; // Adicionando a prioridade da tarefa
+    int dia;
+    int mes;
+    int ano;
+    int prioridade;
     struct Tarefa* proxima;
 } Tarefa;
 
@@ -16,7 +19,7 @@ typedef struct {
 } PilhaTarefas;
 
 void inicializarPilha(PilhaTarefas* pilha);
-void adicionarTarefa(PilhaTarefas* pilha, int id, const char* descricao, const char* data, int prioridade);
+void adicionarTarefa(PilhaTarefas* pilha, int id, const char* descricao, int dia, int mes, int ano, int prioridade);
 void concluirTarefa(PilhaTarefas* pilha);
 void removerTarefa(PilhaTarefas* pilha);
 void listarTarefas(PilhaTarefas* pilha);

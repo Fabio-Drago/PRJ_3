@@ -1,15 +1,15 @@
-# Project: Gestaodetarefas
+# Project: Project_Gestordetarefas
 # Makefile created by Dev-C++ 5.11
 
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o tarefas.o
-LINKOBJ  = main.o tarefas.o
+OBJ      = main.o lop.o tarefas.o
+LINKOBJ  = main.o lop.o tarefas.o
 LIBS     = -L"C:/Dev-Cpp/MinGW64/lib" -L"C:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Dev-Cpp/MinGW64/include" -I"C:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Dev-Cpp/MinGW64/include" -I"C:/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
-BIN      = Gestaodetarefas.exe
+BIN      = Gestordetarefas.exe
 CXXFLAGS = $(CXXINCS) -std=c99
 CFLAGS   = $(INCS) -std=c99
 RM       = rm.exe -f
@@ -26,6 +26,9 @@ $(BIN): $(OBJ)
 
 main.o: main.c
 	$(CC) -c main.c -o main.o $(CFLAGS)
+
+lop.o: lop.c
+	$(CC) -c lop.c -o lop.o $(CFLAGS)
 
 tarefas.o: tarefas.c
 	$(CC) -c tarefas.c -o tarefas.o $(CFLAGS)

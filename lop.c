@@ -13,4 +13,3 @@ int lerOpcao() {
 
     return opcao;
 }
-
