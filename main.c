@@ -1,7 +1,13 @@
+// Código principal (MAIN)
+
 #include "tarefas.h"
+#include "lop.h"
 #include <stdio.h>
+#include <locale.h>
 
 int main() {
+    setlocale(LC_ALL, "Portuguese");
+
     PilhaTarefas pilha;
     inicializarPilha(&pilha);
 
@@ -15,8 +21,7 @@ int main() {
         printf("5. Mostrar Tarefa mais Recente\n");
         printf("6. Fechar o Programa\n");
 
-        printf("Escolha a opcao desejada: ");
-        scanf("%d", &opcao);
+        opcao = lerOpcao();
 
         switch (opcao) {
             case 1:
@@ -25,10 +30,10 @@ int main() {
                     char descricao[50], data[15];
                     printf("Digite o ID da tarefa: ");
                     scanf("%d", &id);
-                    printf("Digite a descricao da tarefa: ");
-                    scanf(" %49[^\n]", descricao);
+                    printf("Digite a descrição da tarefa: ");
+                    scanf("%s", descricao);
                     printf("Digite a data da tarefa (xx/xx/xxxx): ");
-                    scanf(" %14[^\n]", data);
+                    scanf("%s", data);
                     printf("Digite a prioridade da tarefa (1-5): ");
                     scanf("%d", &prioridade);
                     adicionarTarefa(&pilha, id, descricao, data, prioridade);
