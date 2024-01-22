@@ -3,10 +3,15 @@ O código implementa um sistema de gerenciamento de tarefas em C, utilizando pil
 Temos as seguintes seis funções:
 
 1 - Adicionar Tarefa (adicionarTarefa)
+
 2 - Concluir Tarefa (concluirTarefa)
+
 3 - Remover Tarefa (removerTarefa)
+
 4 - Listar Tarefas (listarTarefas)
+
 5 - Mostrar Tarefa mais Recente (mostrarMaisRecente)
+
 6 - Fechar o Programa (Termina o programa)
 
 Essas seis funções compõem o núcleo do seu sistema de gerenciamento de tarefas, oferecendo ao usuário uma variedade de operações para interagir com as tarefas armazenadas na pilha.
