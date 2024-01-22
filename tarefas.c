@@ -42,7 +42,7 @@ void listarTarefas(PilhaTarefas* pilha) {
     Tarefa* atual = pilha->topo;
     printf("Lista de Tarefas:\n");
     while (atual != NULL) {
-        printf("ID/nome: %d, Descricao: %s, Data: %s, Prioridade: %d\n",
+        printf("ID: %d, Descricao: %s, Data: %s, Prioridade: %d\n",
                atual->id, atual->descricao, atual->data, atual->prioridade);
         atual = atual->proxima;
     }
