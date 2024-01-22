@@ -23,7 +23,7 @@ int main() {
                 {
                     int id, prioridade;
                     char descricao[50], data[15];
-                    printf("Digite o ID/Nome da tarefa: ");
+                    printf("Digite o ID da tarefa: ");
                     scanf("%d", &id);
                     printf("Digite a descricao da tarefa: ");
                     scanf(" %49[^\n]", descricao);
@@ -50,7 +50,7 @@ int main() {
                 printf("Fechando o programa...\n");
                 break;
             default:
-                printf("OpÁ„o inv·lida. Tente novamente.\n");
+                printf("Op√ß√£o inv√°lida. Tente novamente.\n");
         }
 
     } while (opcao != 6);
