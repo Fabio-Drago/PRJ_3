@@ -12,6 +12,8 @@ Temos as seguintes seis funções:
 
 5 - Mostrar Tarefa mais Recente (mostrarMaisRecente)
 
-6 - Fechar o Programa (Termina o programa)
+6 - Mostrar tarefas com maior prioridade (Mostra com prioridade 4 até 5)
+
+7 - Fechar o Programa (Termina o programa)
 
 Essas seis funções compõem o núcleo do seu sistema de gerenciamento de tarefas, oferecendo ao usuário uma variedade de operações para interagir com as tarefas armazenadas na pilha.
